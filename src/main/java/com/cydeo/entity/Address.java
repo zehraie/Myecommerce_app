@@ -9,7 +9,8 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 public class Address extends BaseEntity{
 
