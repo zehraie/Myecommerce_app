@@ -11,8 +11,7 @@ import javax.persistence.Id;
 @Entity
 @Data
 @NoArgsConstructor
-public class Category {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Category extends BaseEntity{
+
+    private String name;
 }

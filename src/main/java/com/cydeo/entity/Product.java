@@ -11,16 +11,13 @@ import java.util.List;
 @Entity
 @Data
 @NoArgsConstructor
-public class Product {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Product extends BaseEntity {
 
     private String name;
     private BigDecimal price;
     private Integer quantity;
     private Integer remainingQuantity;
-    @ManyToOne
+    @ManyToMany
     @JoinTable(name="product_category_rel",
    joinColumns = @JoinColumn(name="p_id"),
     inverseJoinColumns = @JoinColumn(name="c_id") )
